@@ -231,7 +231,7 @@ Get /test
                 Request request = new Request.Builder()
                   .url("https://salty-basin-00971.herokuapp.com/test")
                   .method("GET", body)
-                  .addHeader("Authorization", "<access_token>")
+                  .addHeader("Authorization", "Bearer <access_token>")
                   .build();
                 Response response = client.newCall(request).execute();
                 

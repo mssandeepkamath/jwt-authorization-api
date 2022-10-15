@@ -2,7 +2,7 @@
 
 ### A RESTful API built using Kotlin's ktor framework, Postgresql database with JWT Authorization.
 
->Note: The url's wont work on browser. Use  **postman**  for testing API.
+>Note: The url wont work on browser. Use  **postman**  for testing API.
 
 ## Structure:
 

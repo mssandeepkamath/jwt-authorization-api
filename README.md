@@ -8,7 +8,7 @@
 
 ### Base url:
 
->https://salty-basin-00971.herokuapp.com/
+>https://your-domain.com/
 
 ### End points:
 
@@ -30,7 +30,7 @@
 
 POST /auth/register
 
-"Request URL": https://salty-basin-00971.herokuapp.com/auth/register
+"Request URL": https://your-domain.com/auth/register
 
 The request body needs to be in JSON format and include the following properties:
 
@@ -71,7 +71,7 @@ The response body will contain the user details with access token.
                   MediaType mediaType = MediaType.parse("application/json");
                   RequestBody body = RequestBody.create(mediaType, "{\r\n    \"full_name\":\"M S Sandeep Kamath\",\r\n    \"profile\":\"my_profile_url\",\r\n                     \"email\":\"sandeep@gmail.com\",\r\n    \"password\":\"test@postgres\"\r\n}");
                   Request request = new Request.Builder()
-                    .url("https://salty-basin-00971.herokuapp.com/auth/register")
+                    .url("https://your-domain.com/auth/register")
                     .method("POST", body)
                     .addHeader("Content-Type", "application/json")
                     .build();
@@ -102,7 +102,7 @@ The response body will contain the user details with access token.
                 
 >cUrl
 
-                curl --location --request POST 'https://salty-basin-00971.herokuapp.com/auth/register' \
+                curl --location --request POST 'https://your-domain.com/auth/register' \
                 --header 'Content-Type: application/json' \
                 --data-raw '{
                     "full_name":"M S Sandeep Kamath",
@@ -123,7 +123,7 @@ The response body will contain the user details with access token.
 
 POST /auth/login
 
-"Request URL": https://salty-basin-00971.herokuapp.com/auth/login
+"Request URL": https://your-domain/auth/login
 
 The request body needs to be in JSON format and include the following properties:
 
@@ -167,7 +167,7 @@ The response body will contain the user details and access token too.
                         MediaType mediaType = MediaType.parse("application/json");
                         RequestBody body = RequestBody.create(mediaType, "{\r\n\"email\":\"sandeep@gmaiil.com\",\r\n\"password\":\"test@postgres\"\r\n}");
                         Request request = new Request.Builder()
-                          .url("https://salty-basin-00971.herokuapp.com/auth/login")
+                          .url("https://your-domain.com/auth/login")
                           .method("POST", body)
                           .addHeader("Authorization", "Bearer <access_token>")
                           .addHeader("Content-Type", "application/json")
@@ -212,7 +212,7 @@ The response body will contain the user details and access token too.
 
 Get /test
 
-"Request URL": https://salty-basin-00971.herokuapp.com/test
+"Request URL": https://your-domain.com/test
 
 >Header: 
 
@@ -220,7 +220,7 @@ Get /test
             
 >Response:
 
-             hi bro 🤣
+             Communication Successfull!
              
 
 

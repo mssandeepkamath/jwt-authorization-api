@@ -15,7 +15,7 @@ import io.ktor.features.*
 import io.ktor.jackson.*
 
 fun main() {
-    embeddedServer(Netty, port = System.getenv("PORT").toInt()) {
+    embeddedServer(Netty, port = System.getenv("PGPORT").toInt()) {
         DatabaseFactory.init()
        install(ContentNegotiation)
        {

@@ -13,7 +13,7 @@ fun Application.testRoute()
 
        get("/test")
        {
-           call.respond("Hi bro")
+           call.respond("Communication Successful!")
        }
 
    }

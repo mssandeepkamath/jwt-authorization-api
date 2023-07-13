@@ -1,7 +1,7 @@
 package com.sandeep.repository
 
 import com.sandeep.Util.BaseResponse
-import com.sandeep.security.JwtConfig
+import com.sandeep.security.JwtConfigHMAC
 import com.sandeep.service.UserService
 import com.sandeep.model.createUserParam
 
@@ -19,7 +19,7 @@ class UserRepositoryImpl(val userService: UserService) : UserRepository {
 
             if(user!=null)
             {
-                val access_token=JwtConfig.instance.createAuthToken(user.id)
+                val access_token=JwtConfigHMAC.instance.createAuthToken(user.id,user.email,user.full_name)
                 user.auth_token=access_token
                 BaseResponse.SuccessResponse(data=user)
             }
@@ -34,7 +34,7 @@ class UserRepositoryImpl(val userService: UserService) : UserRepository {
         val user=userService.loginUser(email,password)
         return if(user!=null)
         {
-            val accessToken=JwtConfig.instance.createAuthToken(user.id)
+            val accessToken=JwtConfigHMAC.instance.createAuthToken(user.id,user.email,user.full_name)
             user.auth_token=accessToken
             BaseResponse.SuccessResponse(data=user, message = "Login Successful")
         }

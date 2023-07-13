@@ -6,13 +6,13 @@ import io.ktor.auth.jwt.*
 
 fun Application.configureSecurity()
 {
-    JwtConfig.initialize(System.getenv("JWT_SECRET_KEY"))
+    JwtConfigHMAC.initialize(System.getenv("JWT_SECRET_KEY"))
     install(Authentication)
     {
        jwt {
-           verifier(JwtConfig.instance.verifier)
+           verifier(JwtConfigHMAC.instance.verifier)
            validate {
-               val claim=it.payload.getClaim(JwtConfig.CLAIM).asInt()
+               val claim=it.payload.getClaim(JwtConfigHMAC.CLAIM).asInt()
                if(claim!=null)
                {
                    UserIdPricipalForUser(claim)

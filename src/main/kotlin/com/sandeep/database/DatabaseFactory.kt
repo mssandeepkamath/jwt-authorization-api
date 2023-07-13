@@ -40,21 +40,17 @@ object DatabaseFactory
 
 //         return HikariDataSource(config)
 //     }
-
+//postgresql://postgres:S8TcNHa5Zj9asMV3JcPU@containers-us-west-104.railway.app:6497/railway
 private fun hikari(): HikariDataSource {
     val config = HikariConfig()
     config.driverClassName = "org.postgresql.Driver"
-    config.jdbcUrl = System.getenv("DATABASE_URL")
+//    config.jdbcUrl = System.getenv("DATABASE_URL")
     config.maximumPoolSize = 3
     config.isAutoCommit = false
     config.transactionIsolation = "TRANSACTION_REPEATABLE_READ"
-    
-    config.addDataSourceProperty("databaseName", System.getenv("PGDATABASE"))
-    config.addDataSourceProperty("serverName", System.getenv("PGHOST"))
-    config.addDataSourceProperty("portNumber", System.getenv("PGPORT"))
-    config.addDataSourceProperty("user", System.getenv("PGUSER"))
-    config.addDataSourceProperty("password", System.getenv("PGPASSWORD"))
-    
+
+  //  config.jdbcUrl = "jdbc:postgresql://" + System.getenv("PGHOST") + ":" + System.getenv("PGPORT") + "/" + System.getenv("PGDATABASE") + "?sslmode=require&user=" + System.getenv("PGUSER") + "&password=" + System.getenv("PGPASSWORD")
+    config.jdbcUrl = "jdbc:postgresql:mystoryapp?user=postgres&password=813813"
     config.validate()
 
     return HikariDataSource(config)

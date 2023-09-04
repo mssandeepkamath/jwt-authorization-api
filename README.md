@@ -4,10 +4,6 @@
 
 >Note: The url wont work on browser. Use  **postman**  for testing API.
 
-## Postman Collection link (Use RVCE email id):
-
-https://links.getpostman.com/ls/click?upn=3y7nOEZSJOF1v-2Fv7UyshsKYUegQ-2FC6hQcfExkvtFxOCQSmun8mCf7tKlvebS-2FAbE-2FEszRgIiS-2FOebODNww5VBZc29ZvUHWs4lUw6JNiqMhZFj0vO4X-2Bfl-2F-2FV3W70eEGPscls_6q2mkp3Oe76UoeJLKXp5NsCL8NoAdcGhJaf3NBwRwwkl0hfPhgH3cgABd6q1nXLRjKobZXLKk-2BxZSBm74BbwOkQ7P-2F6p6nBAAGfE17dQERGiXRdCtP5-2FtCkJMWrJ-2BjAomq4iIssSdg-2FAmfasnp-2F6LRo-2BZGa0CmFo7nFAGebaygUbwyAy2a6oAkvLbu2kfXmMbQ7rTUtOvPCyek74EHXojjNkSGV0uCNNzFKPkJhVtDaKTuEkluRYnenM-2FimTyl3B9j7c36O3vgObKPIYumbzYoxuGEpyzEhKn9a7EqBH6-2F-2BcOkqfX7pPu5UNuIjx2hUWNNHgs0zxEQecu2H2P6eSDA-3D-3D
-
 ## Structure:
 
 ### Base url:

@@ -8,7 +8,7 @@
 
 ### Base url:
 
->https://your-domain.com/
+>https://../
 
 ### End points:
 

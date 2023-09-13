@@ -1,4 +1,4 @@
-# Authorization_RESTAPI
+# Authorization RESTful API
 
 ### A RESTful API built using Kotlin's ktor framework, Postgresql database with JWT Authorization.
 
